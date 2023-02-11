@@ -42,18 +42,6 @@ Except for the iterative inpainting demo, all the demos are 8-bar long (16s).
 
 <section id="inp">
     Melody:
-    <midi-player src="/media/uncond_inp_below_canon_mld.mid" sound-font visualizer="#Vis_inp_below_mld"> </midi-player>
-    <midi-visualizer src="/media/uncond_inp_below_canon_mld.mid" type="piano-roll" id="Vis_inp_below_mld">
-    </midi-visualizer>
-
-    Inpainted results:
-    <midi-player src="/media/uncond_inp_below_canon_0_split.mid" sound-font visualizer="#Vis_inp_below"> </midi-player>
-    <midi-player src="/media/uncond_inp_below_canon_1_split.mid" sound-font visualizer="#Vis_inp_below"> </midi-player>
-    <midi-visualizer type="piano-roll" id="Vis_inp_below"> </midi-visualizer>
-</section>
-
-<section id="inp">
-    Melody:
     <midi-player src="/media/uncond_inp_below_ode_mld.mid" sound-font visualizer="#Vis_inp_below_mld_1"> </midi-player>
     <midi-visualizer src="/media/uncond_inp_below_ode_mld.mid" type="piano-roll" id="Vis_inp_below_mld_1">
     </midi-visualizer>
@@ -62,6 +50,18 @@ Except for the iterative inpainting demo, all the demos are 8-bar long (16s).
     <midi-player src="/media/uncond_inp_below_ode_0_split.mid" sound-font visualizer="#Vis_inp_below_1"> </midi-player>
     <midi-player src="/media/uncond_inp_below_ode_1_split.mid" sound-font visualizer="#Vis_inp_below_1"> </midi-player>
     <midi-visualizer type="piano-roll" id="Vis_inp_below_1"> </midi-visualizer>
+</section>
+<br>
+<section id="inp">
+    Melody:
+    <midi-player src="/media/uncond_inp_below_canon_mld.mid" sound-font visualizer="#Vis_inp_below_mld"> </midi-player>
+    <midi-visualizer src="/media/uncond_inp_below_canon_mld.mid" type="piano-roll" id="Vis_inp_below_mld">
+    </midi-visualizer>
+
+    Inpainted results:
+    <midi-player src="/media/uncond_inp_below_canon_0_split.mid" sound-font visualizer="#Vis_inp_below"> </midi-player>
+    <midi-player src="/media/uncond_inp_below_canon_1_split.mid" sound-font visualizer="#Vis_inp_below"> </midi-player>
+    <midi-visualizer type="piano-roll" id="Vis_inp_below"> </midi-visualizer>
 </section>
 <br>
 
@@ -75,7 +75,6 @@ Except for the iterative inpainting demo, all the demos are 8-bar long (16s).
     Inpainted results:
     <midi-player src="/media/uncond_inp_bars_0.mid" sound-font visualizer="#Vis_inp_bars"> </midi-player>
     <midi-player src="/media/uncond_inp_bars_1.mid" sound-font visualizer="#Vis_inp_bars"> </midi-player>
-    <midi-player src="/media/uncond_inp_bars_2.mid" sound-font visualizer="#Vis_inp_bars"> </midi-player>
     <midi-visualizer type="piano-roll" id="Vis_inp_bars"> </midi-visualizer>
 </section>
 <br>
@@ -86,70 +85,75 @@ Except for the iterative inpainting demo, all the demos are 8-bar long (16s).
 <midi-visualizer src="/media/uncond_autoreg_0.mid" type="piano-roll" id="Vis_inp_autoreg"> </midi-visualizer>
 <br>
 
-<h2>Generation given chords</h2>
+<h2>Generation with chord conditioning</h2>
 
 <section id="inp">
-    Given chord progression:
+    Chord progression (condition):
     <midi-player src="/media/chd_v_chd.mid" sound-font visualizer="#Vis_chd_v_chd"> </midi-player>
     <midi-visualizer src="/media/chd_v_chd.mid" type="piano-roll" id="Vis_chd_v_chd"> </midi-visualizer>
 </section>
 
-Generation (different random seeds):
+Generation (no guidance):
 <midi-player src="/media/chd_v_0.mid" sound-font visualizer="#Vis_chd_v"> </midi-player>
-<midi-player src="/media/chd_v_1.mid" sound-font visualizer="#Vis_chd_v"> </midi-player>
+<!-- <midi-player src="/media/chd_v_1.mid" sound-font visualizer="#Vis_chd_v"> </midi-player> -->
 <midi-player src="/media/chd_v_2.mid" sound-font visualizer="#Vis_chd_v"> </midi-player>
+
+Generation (guidance scale = 5)
+<midi-player src="/media/chd_gs_5.mid" sound-font visualizer="#Vis_chd_v"> </midi-player>
 <midi-visualizer type="piano-roll" id="Vis_chd_v"> </midi-visualizer>
 
-<section id="inp">
-    Given chd progression:
-    <midi-player src="/media/chd_gs_chd.mid" sound-font visualizer="#Vis_chd_gs_chd"> </midi-player>
-    <midi-visualizer src="/media/chd_gs_chd.mid" type="piano-roll" id="Vis_chd_gs_chd"> </midi-visualizer>
-</section>
+<!-- <section id="inp"> -->
+<!--     Chord progression (condition): -->
+<!--     <midi-player src="/media/chd_gs_chd.mid" sound-font visualizer="#Vis_chd_gs_chd"> </midi-player> -->
+<!--     <midi-visualizer src="/media/chd_gs_chd.mid" type="piano-roll" id="Vis_chd_gs_chd"> </midi-visualizer> -->
+<!-- </section> -->
 
-Generation (same seed with different guidance scales):
+<!-- Generation (same seed with different guidance scales): -->
+<!-- <br> -->
+<!-- guidance scale = 1 -->
+<!-- <midi-player src="/media/chd_gs_1.mid" sound-font visualizer="#Vis_chd_gs"> </midi-player> -->
+<!-- guidance scale = 3 -->
+<!-- <midi-player src="/media/chd_gs_3.mid" sound-font visualizer="#Vis_chd_gs"> </midi-player> -->
+<!-- guidance scale = 5 -->
+<!-- <midi-player src="/media/chd_gs_5.mid" sound-font visualizer="#Vis_chd_gs"> </midi-player> -->
+<!-- guidance scale = 10 -->
+<!-- <midi-player src="/media/chd_gs_10.mid" sound-font visualizer="#Vis_chd_gs"> </midi-player> -->
+<!-- <midi-visualizer type="piano-roll" id="Vis_chd_gs"> </midi-visualizer> -->
 <br>
-guidance scale = 1
-<midi-player src="/media/chd_gs_1.mid" sound-font visualizer="#Vis_chd_gs"> </midi-player>
-guidance scale = 3
-<midi-player src="/media/chd_gs_3.mid" sound-font visualizer="#Vis_chd_gs"> </midi-player>
-guidance scale = 5
-<midi-player src="/media/chd_gs_5.mid" sound-font visualizer="#Vis_chd_gs"> </midi-player>
-guidance scale = 10
-<midi-player src="/media/chd_gs_10.mid" sound-font visualizer="#Vis_chd_gs"> </midi-player>
-<midi-visualizer type="piano-roll" id="Vis_chd_gs"> </midi-visualizer>
-<br>
 
-<h2>Generation given textures</h2>
+<h2>Generation with texture conditioning</h2>
 
 <section id="inp">
-    Given texture from MIDI:
+    Texture MIDI (condition):
     <midi-player src="/media/txt_v_txt.mid" sound-font visualizer="#Vis_txt_v_txt"> </midi-player>
     <midi-visualizer src="/media/txt_v_txt.mid" type="piano-roll" id="Vis_txt_v_txt"> </midi-visualizer>
 </section>
 
-Generation (different random seeds):
+Generation (no guidance):
 <midi-player src="/media/txt_v_0.mid" sound-font visualizer="#Vis_txt_v"> </midi-player>
 <midi-player src="/media/txt_v_1.mid" sound-font visualizer="#Vis_txt_v"> </midi-player>
-<midi-player src="/media/txt_v_2.mid" sound-font visualizer="#Vis_txt_v"> </midi-player>
+<!-- <midi-player src="/media/txt_v_2.mid" sound-font visualizer="#Vis_txt_v"> </midi-player> -->
+Generation (guidance scale = 5)
+<midi-player src="/media/txt_gs_5.mid" sound-font visualizer="#Vis_txt_v"> </midi-player>
 <midi-visualizer type="piano-roll" id="Vis_txt_v"> </midi-visualizer>
 
-<section id="inp">
-    Given texture from MIDI:
-    <midi-player src="/media/txt_gs_txt.mid" sound-font visualizer="#Vis_txt_gs_txt"> </midi-player>
-    <midi-visualizer src="/media/txt_gs_txt.mid" type="piano-roll" id="Vis_txt_gs_txt"> </midi-visualizer>
-</section>
+<!-- <section id="inp"> -->
+<!--     Texture MIDI (condition): -->
+<!--     <midi-player src="/media/txt_gs_txt.mid" sound-font visualizer="#Vis_txt_gs_txt"> </midi-player> -->
+<!--     <midi-visualizer src="/media/txt_gs_txt.mid" type="piano-roll" id="Vis_txt_gs_txt"> </midi-visualizer> -->
+<!-- </section> -->
 
-Generation (same seed with different guidance scales):
-<br>
-guidance scale = 1
-<midi-player src="/media/txt_gs_1.mid" sound-font visualizer="#Vis_txt_gs"> </midi-player>
-guidance scale = 3
-<midi-player src="/media/txt_gs_3.mid" sound-font visualizer="#Vis_txt_gs"> </midi-player>
-guidance scale = 5
-<midi-player src="/media/txt_gs_5.mid" sound-font visualizer="#Vis_txt_gs"> </midi-player>
-guidance scale = 10
-<midi-player src="/media/txt_gs_10.mid" sound-font visualizer="#Vis_txt_gs"> </midi-player>
-<midi-visualizer type="piano-roll" id="Vis_txt_gs"> </midi-visualizer>
+<!-- Generation (same seed with different guidance scales): -->
+<!-- <br> -->
+<!-- guidance scale = 1 -->
+<!-- <midi-player src="/media/txt_gs_1.mid" sound-font visualizer="#Vis_txt_gs"> </midi-player> -->
+<!-- guidance scale = 3 -->
+<!-- <midi-player src="/media/txt_gs_3.mid" sound-font visualizer="#Vis_txt_gs"> </midi-player> -->
+<!-- guidance scale = 5 -->
+<!-- <midi-player src="/media/txt_gs_5.mid" sound-font visualizer="#Vis_txt_gs"> </midi-player> -->
+<!-- guidance scale = 10 -->
+<!-- <midi-player src="/media/txt_gs_10.mid" sound-font visualizer="#Vis_txt_gs"> </midi-player> -->
+<!-- <midi-visualizer type="piano-roll" id="Vis_txt_gs"> </midi-visualizer> -->
 <br>
 
 <h2>Chord-specified accompaniment generation given melody</h2>
@@ -197,6 +201,6 @@ guidance scale = 10
 <script
     src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
 
-We uses <a href="https://cifkao.github.io/html-midi-player/">html-midi-player</a> for MIDI visualization.
+Thanks <a href="https://cifkao.github.io/html-midi-player/">html-midi-player</a> for the excellent MIDI visualization.
 
 </html>
