@@ -7,11 +7,37 @@ layout: home
     <link rel="stylesheet" href="styles.css">
 </head>
 
-This is the supplimentary demo page for our paper <i>Polyffusion: A Diffusion Model for Polyphonic Score Generation with
-    Internal and External Controls</i>. In each MIDI visualization block, blue notes denote the generated results.
-Except for the iterative inpainting demo, all the demos are 8-bar long (16s).
+<h2>Abstract</h2>
 
-<br><br>
+<p>In this paper, we propose a novel method to generate polyphonic music scores with a diffusion model by regarding
+    music
+    as image-like piano roll representations. We distinguish between two paradigms of <i>controllable</i> music
+    generation
+    under a diffusion framework: internal control and external control. Internal control refers to the process that
+    users
+    first pre-define a part of the music and let the model infill the rest, which is similar to the task of masked music
+    generation (or music inpainting). External control means to condition the model with external yet related
+    information,
+    such as chord, texture, or other statistics of music, via the cross-attention mechanism. We show that by using
+    internal
+    and external controls, our model unifies a wide range of music creation tasks, including melody generation given
+    accompaniment, accompaniment generation given melody, arbitrary music segment inpainting, and general music
+    arrangement
+    given chords or textures. Experimental results show that our model achieves better generative quality compared to
+    existing autoregressive and sampling-based baselines, and using pre-trained disentangled representations as external
+    conditions yields more effective controls.
+</p>
+
+<hr color="#E8E8E8">
+<br>
+
+
+<p>
+    In each MIDI visualization block, <font color="#2B7ADB">blue</font> notes denote the generated results. Except for
+    the iterative inpainting demo,
+    all the demos are 8-bar long (16s).
+</p>
+
 
 <h2>Generation</h2>
 
