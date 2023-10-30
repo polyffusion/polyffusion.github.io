@@ -1,17 +1,25 @@
-midi-player {
+.center-stuff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.vis midi-player {
     display: block;
     width: inherit;
     margin: 4px;
     margin-bottom: 0;
 }
 
-midi-player::part(control-panel) {
+.vis midi-player::part(control-panel) {
     /* background: #252a34; */
     border: 2px solid #000;
     border-radius: 10px 10px 0 0;
 }
 
-midi-player::part(play-button) {
+.vis midi-player::part(play-button) {
     color: #222;
     border: 2px solid currentColor;
     background-color: #ddd;
@@ -20,7 +28,7 @@ midi-player::part(play-button) {
     content: 'hello';
 }
 
-midi-player::part(play-button):hover {
+.vis midi-player::part(play-button):hover {
     color: #000;
     background-color: #fff;
     border-radius: 10px;
@@ -31,7 +39,7 @@ midi-player::part(time) {
 }
 
 /* Custom visualizer style */
-midi-visualizer .piano-roll-visualizer {
+.vis midi-visualizer .piano-roll-visualizer {
     /* background: #252a34; */
     border: 2px solid black;
     border-top: none;
@@ -39,6 +47,14 @@ midi-visualizer .piano-roll-visualizer {
     margin: 4px;
     margin-top: 0;
     overflow: auto;
+}
+
+.alone midi-visualizer .piano-roll-visualizer {
+  /* background: #252a34; */
+  border: 2px solid black;
+  border-radius: 10px 10px 10px 10px;
+  margin: 5px;
+  overflow: auto;
 }
 
 midi-visualizer svg rect.note {
@@ -51,12 +67,12 @@ midi-visualizer svg rect.note[data-instrument="0"] {
     /* stroke: #500; */
 }
 
-#inp midi-visualizer svg rect.note[data-instrument="0"] {
+.inp midi-visualizer svg rect.note[data-instrument="0"] {
     fill: #444;
     /* stroke: #500; */
 }
 
-#inp midi-visualizer svg rect.note[data-instrument="1"] {
+.inp midi-visualizer svg rect.note[data-instrument="1"] {
     fill: #1c71d8;
     /* stroke: #055; */
 }
@@ -71,3 +87,6 @@ midi-visualizer svg rect.note.active {
     stroke: #000;
 }
 
+midi-visualizer .piano-roll-visualizer svg {
+  background: linear-gradient(90deg, #aaa 1px, transparent 1px 15px, rgba(170, 170, 170, 0.3333333333) 16px, transparent 16px 30px, rgba(170, 170, 170, 0.3333333333) 31px, transparent 31px 45px, rgba(170, 170, 170, 0.3333333333) 46px, transparent 46px) left/60px repeat;
+}
